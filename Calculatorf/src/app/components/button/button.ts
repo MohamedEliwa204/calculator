@@ -11,6 +11,8 @@ export class Button {
   symbol = input<string>('');
   color = input<string>('lightgray');
   color2 = input<string>('lightgray');
+
+
   calc = inject(CaculatorService);
 
   onClick(){

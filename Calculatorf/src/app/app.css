@@ -1,0 +1,46 @@
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.calculator-body {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  width: 320px;
+  min-height: 480px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+
+.history-sidebar {
+  width: 280px;
+  height: 480px;
+  align-self: center;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .history-sidebar {
+    width: 320px;
+    max-height: 300px;
+  }
+}
+

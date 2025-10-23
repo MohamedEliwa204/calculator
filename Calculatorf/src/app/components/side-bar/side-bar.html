@@ -1,0 +1,28 @@
+<div class="history-panel">
+  <div class="history-header">
+    <h3>History</h3>
+    <button class="clear-btn" (click)="clearHistory()" *ngIf="history().length > 0">
+      Clear All
+    </button>
+  </div>
+
+  <div class="history-list" *ngIf="history().length > 0; else noHistory">
+    <div
+      *ngFor="let item of history(); let i = index"
+      class="history-item"
+      (click)="useExpression(item)"
+    >
+      <div class="history-expression">{{ item.expression }}</div>
+      <div class="history-result">= {{ item.result }}</div>
+    </div>
+  </div>
+
+  <ng-template #noHistory>
+    <div class="no-history">
+      <p>No history yet</p>
+      <p class="hint">Your calculations will appear here</p>
+    </div>
+  </ng-template>
+</div>
+
+

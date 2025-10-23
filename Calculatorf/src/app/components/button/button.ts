@@ -13,7 +13,6 @@ export class Button {
   color2 = input<string>('lightgray');
   calc = inject(CaculatorService);
 
-
   onClick(){
     this.calc.append(this.symbol(), this.fn());
   }
